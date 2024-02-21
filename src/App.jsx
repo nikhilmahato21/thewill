@@ -20,7 +20,10 @@ export default function App() {
         <Navbar />
         <div className="flex">
           <LeftBar />
-          <Outlet />
+          <div className="w-[55%]">
+            <Outlet />
+          </div>
+
           <RightBar />
         </div>
       </div>
