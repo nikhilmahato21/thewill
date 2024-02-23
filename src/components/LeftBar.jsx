@@ -14,7 +14,7 @@ import Fund from "../assets/13.png";
 
 const LeftBar = () => {
   return (
-    <div className="leftBar w-[20%]">
+    <div className="leftBar w-[20%] sticky top-[72px] h-[calc(100vh-72px)] overflow-scroll scrollbar no-scrollbar">
       <div className="container p-5">
         <div className="menu flex flex-col gap-5">
           <div className="user flex items-center gap-2">

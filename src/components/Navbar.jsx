@@ -8,7 +8,7 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 const Navbar = () => {
   return (
-    <div className=" flex items-center justify-between px-5 py-3 h-12 border-b-2 border-gray-100 border-solid">
+    <div className=" flex items-center justify-between px-5 py-3 h-12 border-b-2 border-gray-100 border-solid sticky top-0 bg-white">
       <div className=" flex items-center gap-7">
         <Link to="/">
           <span className="font-bold text-xl text-slate-400">thewill.</span>
