@@ -45,9 +45,7 @@ const RightBar = () => {
                 className=" w-10 h-10 rounded-full object-cover"
               />
               <p className="text-gray-800 text-sm">
-                <span className=" font-medium text-black mr-[3px]">
-                  Hell nik
-                </span>
+                <span className=" font-medium  mr-[3px]">Hell nik</span>
                 changed their cover picture
               </p>
             </div>
@@ -61,9 +59,7 @@ const RightBar = () => {
                 className=" w-10 h-10 rounded-full object-cover"
               />
               <p className="text-gray-800 text-sm">
-                <span className=" font-medium text-black text-sm">
-                  Hell nik
-                </span>
+                <span className=" font-medium  text-sm">Hell nik</span>
                 changed their cover picture
               </p>
             </div>
@@ -77,9 +73,7 @@ const RightBar = () => {
                 className=" w-10 h-10 rounded-full object-cover"
               />
               <p className="text-gray-800 text-sm">
-                <span className=" font-medium text-black text-sm">
-                  Hell nik
-                </span>
+                <span className=" font-medium  text-sm">Hell nik</span>
                 changed their cover picture
               </p>
             </div>
@@ -93,9 +87,7 @@ const RightBar = () => {
                 className=" w-10 h-10 rounded-full object-cover"
               />
               <p className="text-gray-800 text-sm">
-                <span className=" font-medium text-black text-sm">
-                  Hell nik
-                </span>
+                <span className=" font-medium  text-sm">Hell nik</span>
                 changed their cover picture
               </p>
             </div>
@@ -113,7 +105,7 @@ const RightBar = () => {
               />
               <div className="online w-3 h-3 rounded-full bg-green-500 absolute top-0 left-8"></div>
 
-              <span className=" font-medium text-black text-sm">Hell nik</span>
+              <span className=" font-medium  text-sm">Hell nik</span>
             </div>
           </div>
           <div className="user flex items-center justify-between my-5">
@@ -161,7 +153,7 @@ const RightBar = () => {
               />
               <div className="online w-3 h-3 rounded-full bg-green-500 absolute top-0 left-8"></div>
 
-              <span className=" font-medium text-black text-sm">Hell nik</span>
+              <span className=" font-medium  text-sm">Hell nik</span>
             </div>
           </div>
           <div className="user flex items-center justify-between my-5">
@@ -173,7 +165,7 @@ const RightBar = () => {
               />
               <div className="online w-3 h-3 rounded-full bg-green-500 absolute top-0 left-8"></div>
 
-              <span className=" font-medium text-black text-sm">Hell nik</span>
+              <span className=" font-medium  text-sm">Hell nik</span>
             </div>
           </div>
           <div className="user flex items-center justify-between my-5">
@@ -185,7 +177,7 @@ const RightBar = () => {
               />
               <div className="online w-3 h-3 rounded-full bg-green-500 absolute top-0 left-8"></div>
 
-              <span className=" font-medium text-black text-sm">Hell nik</span>
+              <span className=" font-medium  text-sm">Hell nik</span>
             </div>
           </div>
         </div>

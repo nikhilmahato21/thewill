@@ -1,27 +1,45 @@
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
 import { Link } from "react-router-dom";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
+import { useState } from "react";
+
 const Navbar = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+    const theme = isDarkMode ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", theme);
+  };
+
   return (
-    <div className=" flex items-center justify-between px-5 py-3 h-12 border-b-2 border-gray-100 border-solid sticky top-0 bg-white">
+    <div className=" flex items-center justify-between px-5 py-3 h-12 border-b-2 border-gray-100 border-solid sticky top-0 ">
       <div className=" flex items-center gap-7">
         <Link to="/">
-          <span className="font-bold text-xl text-slate-400">thewill.</span>
+          <span className="font-bold text-xl ">thewill.</span>
         </Link>
         <HomeOutlinedIcon />
-        <DarkModeOutlinedIcon />
+        <div>
+          {isDarkMode ? (
+            <LightModeOutlinedIcon onClick={toggleTheme} />
+          ) : (
+            <DarkModeOutlinedIcon onClick={toggleTheme} />
+          )}
+        </div>
+
         <GridViewOutlinedIcon />
-        <div className=" flex items-center gap-2 border border-solid border-gray-400 rounded-md p-1">
+        <div className=" flex items-center gap-2 border border-solid  rounded-md p-1">
           <SearchOutlinedIcon />
           <input
             type="text"
             placeholder="search..."
-            className=" focus:outline-none w-96"
+            className=" focus:outline-none w-96 bg-transparent"
           />
         </div>
       </div>
