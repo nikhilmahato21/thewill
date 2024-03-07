@@ -21,9 +21,9 @@ const Navbar = () => {
         <HomeOutlinedIcon />
         <div>
           {darkMode ? (
-            <DarkModeOutlinedIcon onClick={toggleTheme} />
-          ) : (
             <LightModeOutlinedIcon onClick={toggleTheme} />
+          ) : (
+            <DarkModeOutlinedIcon onClick={toggleTheme} />
           )}
         </div>
 
@@ -33,7 +33,7 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="search..."
-            className=" focus:outline-none w-96 bg-transparent"
+            className=" focus:outline-none w-96 "
           />
         </div>
       </div>

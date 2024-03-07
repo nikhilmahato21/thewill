@@ -17,7 +17,7 @@ import { DarkModeContext } from "./context/darkModeContext";
 export default function App() {
   const currentUser = true;
   const { darkMode } = useContext(DarkModeContext);
-  const theme = darkMode ? "light" : "dark";
+  const theme = darkMode ? "dark" : "light";
   document.documentElement.setAttribute("data-theme", theme);
 
   const Layout = () => {

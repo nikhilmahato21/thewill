@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { DarkModeContext } from "../context/darkModeContext";
 
 const Home = () => {
+  const { darkMode } = useContext(DarkModeContext);
   return (
-    <div>
+    <div className={` ${darkMode && "bg-gray-700"}`}>
       <h1>home</h1>
       <h1>home</h1>
       <h1>home</h1>

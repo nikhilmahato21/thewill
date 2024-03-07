@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import { DarkModeContext } from "../context/darkModeContext";
 
 const RightBar = () => {
+  const { darkMode } = useContext(DarkModeContext);
   return (
     <div className="w-[30%] sticky top-[72px] h-[calc(100vh-72px)] overflow-scroll scrollbar no-scrollbar">
       <div className="container p-5">
-        <div className=" item shadow-md rounded-xl p-5 mb-5">
+        <div
+          className={`item shadow-md rounded-xl p-5 mb-5 ${
+            darkMode && "border - white"
+          }`}
+        >
           <span className=" text-gray-400">Suggestions For You</span>
           <div className="user flex items-center justify-between my-5">
             <div className="userInfo flex items-center gap-5">
@@ -35,7 +41,11 @@ const RightBar = () => {
             </div>
           </div>
         </div>
-        <div className=" item shadow-md rounded-xl p-5 mb-5">
+        <div
+          className={`item shadow-md rounded-xl p-5 mb-5 ${
+            darkMode && "border - white"
+          }`}
+        >
           <span className=" text-gray-400">Latest Activities</span>
           <div className="user flex items-center justify-between my-5">
             <div className="userInfo flex items-center gap-5">
@@ -94,7 +104,11 @@ const RightBar = () => {
             <span className="text-sm text-slate-400">1 min ago</span>
           </div>
         </div>
-        <div className="item shadow-md rounded-xl p-5 mb-5">
+        <div
+          className={`item shadow-md rounded-xl p-5 mb-5 ${
+            darkMode && "border - white"
+          }`}
+        >
           <span className=" text-gray-400">Online Friends</span>
           <div className="user flex items-center justify-between my-5">
             <div className="userInfo flex items-center gap-5 relative">
