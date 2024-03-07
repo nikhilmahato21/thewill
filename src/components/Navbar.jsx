@@ -7,17 +7,11 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { DarkModeContext } from "../context/darkModeContext";
 
 const Navbar = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-    const theme = isDarkMode ? "light" : "dark";
-    document.documentElement.setAttribute("data-theme", theme);
-  };
-
+  const { darkMode, toggleTheme } = useContext(DarkModeContext);
   return (
     <div className=" flex items-center justify-between px-5 py-3 h-12 border-b-2 border-gray-100 border-solid sticky top-0 ">
       <div className=" flex items-center gap-7">
@@ -26,10 +20,10 @@ const Navbar = () => {
         </Link>
         <HomeOutlinedIcon />
         <div>
-          {isDarkMode ? (
-            <LightModeOutlinedIcon onClick={toggleTheme} />
-          ) : (
+          {darkMode ? (
             <DarkModeOutlinedIcon onClick={toggleTheme} />
+          ) : (
+            <LightModeOutlinedIcon onClick={toggleTheme} />
           )}
         </div>
 

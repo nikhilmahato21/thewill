@@ -11,9 +11,15 @@ import Navbar from "./components/Navbar";
 import LeftBar from "./components/LeftBar";
 import RightBar from "./components/RightBar";
 import Profile from "./pages/Profile";
+import { useContext } from "react";
+import { DarkModeContext } from "./context/darkModeContext";
 
 export default function App() {
   const currentUser = true;
+  const { darkMode } = useContext(DarkModeContext);
+  const theme = darkMode ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", theme);
+
   const Layout = () => {
     return (
       <div>
