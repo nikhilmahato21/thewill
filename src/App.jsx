@@ -13,9 +13,10 @@ import RightBar from "./components/RightBar";
 import Profile from "./pages/Profile";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
+import { AuthContext } from "./context/authContext";
 
 export default function App() {
-  const currentUser = true;
+  const { currentUser } = useContext(AuthContext);
   const { darkMode } = useContext(DarkModeContext);
   const theme = darkMode ? "dark" : "light";
   document.documentElement.setAttribute("data-theme", theme);

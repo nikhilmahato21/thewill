@@ -9,9 +9,11 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import { useContext, useState } from "react";
 import { DarkModeContext } from "../context/darkModeContext";
+import { AuthContext } from "../context/authContext";
 
 const Navbar = () => {
   const { darkMode, toggleTheme } = useContext(DarkModeContext);
+  const { currentUser } = useContext(AuthContext);
   return (
     <div className=" flex items-center justify-between px-5 py-3 h-12 border-b-2 border-gray-100 border-solid sticky top-0 ">
       <div className=" flex items-center gap-7">
@@ -43,11 +45,11 @@ const Navbar = () => {
         <NotificationsOutlinedIcon />
         <div className=" flex items-center gap-2 font-semibold">
           <img
-            src="https://w0.peakpx.com/wallpaper/307/696/HD-wallpaper-ichigo-bleach-bleach.jpg"
+            src={currentUser.profilePic}
             alt=""
             className=" w-8 h-8 rounded-full object-cover"
           />
-          <span>nik</span>
+          <span>{currentUser.name}</span>
         </div>
       </div>
     </div>
